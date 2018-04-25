@@ -1,7 +1,7 @@
 # Site
 title:              Baspar
 subtitle:           Laine Bastien
-description:        "Welcome to my personal website and blog"
+description:        "Hey there! I'm Baspar, and welcome to my website and blog"
 locale:             en_US
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
