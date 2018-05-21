@@ -2,9 +2,8 @@
 layout   : post
 title    : "Promise.race: who came back first ?"
 date     : 2018-04-26
-category : WIP
+category : mini
 excerpt  : "Promise.race"
-image    : "/images/2018-04-26-telegram/thumb.jpg"
 ---
 
 A few days ago, I was playing with [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race), and I got stuck into one pattern I didn't like.
