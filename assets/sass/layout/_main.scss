@@ -74,6 +74,7 @@
 		}
 
 		> .posts {
+            background-color: pink;
 			@include flexgrid((
 				columns:			2,
 				gutters:			(_size(padding) * 4),
