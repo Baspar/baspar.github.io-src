@@ -74,7 +74,6 @@
 		}
 
 		> .posts {
-            background-color: pink;
 			@include flexgrid((
 				columns:			2,
 				gutters:			(_size(padding) * 4),
@@ -144,6 +143,50 @@
 						margin-right: auto;
 					}
 				}
+			}
+		}
+
+		> .minis {
+            padding: 2rem 4rem;
+            @include breakpoint(medium) {
+                padding: 2rem;
+			}
+            > a {
+                &:after {
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    margin: 10px 0;
+                    background-color: #eee;
+                }
+                &:last-child:after {
+                    content: none;
+                }
+                > article {
+                    cursor: pointer;
+                    opacity: 1;
+                    transition: opacity .3s;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                    > header {
+                        cursor: pointer;
+                        width: 100%;
+                        > span, > h2 {
+                            margin: 0;
+                        }
+                    }
+                    > p {
+                        margin: 0;
+                    }
+                }
+            }
+
+			@include breakpoint(medium) {
+			}
+
+			@include breakpoint(small) {
+
 			}
 		}
 
