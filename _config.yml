@@ -27,7 +27,7 @@ kramdown:
   enable_coderay:   false
 mathjax:            true
 sass:
-  sass_dir:         _sass
+  sass_dir:         assets/css
   style:            compressed
 
 # Comments
