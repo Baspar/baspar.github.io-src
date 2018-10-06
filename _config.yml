@@ -6,20 +6,25 @@ locale:             en_US
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    permalink: "/posts/:title/"
-    layout: post
+# defaults:
+# - scope:
+#     path: ''
+#     type: posts
+#   values:
+#     permalink: "/posts/:title/"
+#     layout: post
 
 # Collection
 collections:
-  mini:
+  miniposts:
+    output: true
+    permalink: "/miniposts/:title"
+  posts:
+    output: true
+    permalink: "/posts/:title"
 
 # Jekyll
-permalink:          /posts/:title/
+# permalink:          /posts/:title/
 markdown:           kramdown
 highlighter:        rouge
 kramdown:

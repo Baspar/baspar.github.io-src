@@ -43,7 +43,7 @@
           </article>
 					<!-- Post -->
 					<section class="minis">
-						{% for post in site.categories.mini %}
+						{% for post in site.miniposts %}
                             <a href={{ post.url | absolute_url }}>
                                 <article onclick="window.location = {{ post.url | absolute_url }}">
                                     <header>
