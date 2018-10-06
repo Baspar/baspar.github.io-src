@@ -13,7 +13,10 @@ defaults:
   values:
     permalink: "/posts/:title/"
     layout: post
-    author:
+
+# Collection
+collections:
+  mini:
 
 # Jekyll
 permalink:          /posts/:title/
@@ -42,6 +45,7 @@ github:             baspar
 location:           Singapore
 phone:              (+65) 8748 0663
 email:              bastien.laine@gmail.com
+telegram:           baspar
 
 # Gems
 gems:
