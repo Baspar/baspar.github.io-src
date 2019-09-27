@@ -2,7 +2,7 @@
 layout   : post
 title    : "Promise.race: who came back first ?"
 date     : 2019-08-27
-excerpt  : "Promise.race"
+excerpt  : "An handy utility to make using Promise.race easy"
 ---
 
 A few days ago, I was playing with [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race), and I got stuck into one pattern I didn't like.

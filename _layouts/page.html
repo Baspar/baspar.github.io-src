@@ -1,59 +1,54 @@
 <!DOCTYPE HTML>
 <!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-  Jekyll integration by somiibo.com
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Jekyll integration by somiibo.com
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-    {% include head.html %}
-	</head>
-	<body class="is-loading">
+    <head>
+        {% include head.html %}
+    </head>
+    <body class="is-loading">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
 
-				<!-- Header -->
-				<header id="header">
-					<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
-				</header>
+            <!-- Header -->
+            <header id="header">
+                <a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
+            </header>
 
-				<!-- Nav -->
-					<nav id="nav">
+            <!-- Nav -->
+            <nav id="nav">
+                {% include nav.html %}
+                {% include icons.html %}
+            </nav>
 
-            {% include nav.html %}
+            <!-- Main -->
+            <div id="main">
 
-						<ul class="icons">
-              <li><a href="https://www.linkedin.com/in/{{site.linkedin}}" class="icon fa-linkedin" rel="nofollow"><span class="label">Linkedin</span></a></li>
-              <li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+                <!-- Post -->
+                <section class="post">
+                    <p>{{content}}</p>
+                </section>
 
-				<!-- Main -->
-				<div id="main">
+                <!-- Footer -->
+                <footer>
+                    <ul class="actions">
+                        <li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
+                    </ul>
+                </footer>
+            </div>
 
-					<!-- Post -->
-					<section class="post">
-						<p>{{content}}</p>
-					</section>
+            <!-- Footer -->
+            {% include foot.html %}
 
-					<!-- Footer -->
-						<footer>
-              <ul class="actions">
-								<li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
-              </ul>
-						</footer>
-					</div>
+        </div>
 
-				<!-- Footer -->
-        {% include foot.html %}
+        <!-- Scripts -->
+        {% include scripts-main.html %}
+        {% include tracking.html %}
 
-			</div>
-
-			<!-- Scripts -->
-			{% include scripts-main.html %}
-			{% include tracking.html %}
-
-	</body>
+    </body>
 </html>

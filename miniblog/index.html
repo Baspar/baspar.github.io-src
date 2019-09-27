@@ -2,81 +2,77 @@
 title: Baspar - Miniblog
 description: The place for every interesting piece of knowledge I have to share, but not consequent enough to have its full blog article
 sitemap:
-    priority: 1.0
-    lastmod: 2017-11-02
-    changefreq: weekly
+priority: 1.0
+lastmod: 2017-11-02
+changefreq: weekly
 pagination:
-    enabled: true
-    collection: miniposts
+enabled: true
+collection: miniposts
 ---
 <!DOCTYPE HTML>
 <!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-  Jekyll integration by somiibo.com
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Jekyll integration by somiibo.com
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-    {% include head.html %}
+    <head>
+        {% include head.html %}
 
-	</head>
-	<body class="is-loading">
+    </head>
+    <body class="is-loading">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
 
-				<!-- Header -->
-				<header id="header">
-					<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
-				</header>
-
-
-				<!-- Nav -->
-					<nav id="nav">
-
-            {% include nav.html %}
-
-						<ul class="icons">
-              <li><a href="https://www.linkedin.com/in/{{site.linkedin}}" class="icon fa-linkedin" rel="nofollow"><span class="label">Linkedin</span></a></li>
-              <li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
-</ul>
-					</nav>
-
-				<!-- Main -->
-				<div id="main">
-
-          <article class="post featured">
-            <header class="major">
-              <h2><a href="#">Mini blog</a></h2>
-              <p>The place for every interesting piece of knowledge I have to share, but not consequent enough to have its full blog article</p>
+            <!-- Header -->
+            <header id="header">
+                <a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
             </header>
-          </article>
-					<!-- Post -->
-					<section class="minis">
-						{% for post in site.miniposts %}
-                            <a href={{ post.url | absolute_url }}>
-                                <article onclick="window.location = {{ post.url | absolute_url }}">
-                                    <header>
-                                        <span class="date">{{ post.date | date_to_string }}</span>
-                                        <h2>{{ post.title }}</h2>
-                                    </header>
-                                    <p>{{ post.excerpt }}</p>
-                                </article>
-                            </a>
-						{% endfor %}
-					</section>
 
-					</div>
 
-				<!-- Footer -->
-        {% include foot.html %}
+            <!-- Nav -->
+            <nav id="nav">
+                {% include nav.html %}
+                {% include icons.html %}
+            </nav>
 
-			</div>
+            <!-- Main -->
+            <div id="main">
 
-			<!-- Scripts -->
-			{% include scripts-main.html %}
-			{% include tracking.html %}
+                <article class="post featured">
+                    <header class="major">
+                        <h2><a href="#">Mini blog</a></h2>
+                        <p>The place for every interesting piece of knowledge I have to share, but not consequent enough to have its full blog article</p>
+                    </header>
+                </article>
 
-	</body>
+                <!-- Post -->
+                <section class="minis">
+                    {% for post in site.miniposts %}
+                    <a href={{ post.url | absolute_url }}>
+                        <article onclick="window.location = {{ post.url | absolute_url }}">
+                            <header>
+                                <span class="date">{{ post.date | date_to_string }}</span>
+                                <h2>{{ post.title }}</h2>
+                            </header>
+                            <p>{{ post.excerpt }}</p>
+                        </article>
+                    </a>
+                    {% endfor %}
+                </section>
+
+            </div>
+
+            <!-- Footer -->
+            {% include foot.html %}
+
+        </div>
+
+        <!-- Scripts -->
+        {% include scripts-main.html %}
+        {% include tracking.html %}
+
+    </body>
 </html>
