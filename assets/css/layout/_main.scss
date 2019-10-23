@@ -196,6 +196,7 @@
       text-align: center;
       width: 100%;
       color: _palette(alt, fg);
+			border-bottom: solid 2px _palette(border);
     }
 
 		@include breakpoint(small) {
