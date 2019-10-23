@@ -10,10 +10,10 @@ url: "" # the base hostname & protocol for your site
 collections:
   miniposts:
     output: true
-    permalink: "/miniposts/:title"
+    permalink: "/miniposts/:title/"
   posts:
     output: true
-    permalink: "/posts/:title"
+    permalink: "/posts/:title/"
 
 # Jekyll
 markdown:           kramdown
