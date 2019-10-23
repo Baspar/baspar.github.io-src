@@ -150,7 +150,7 @@
             padding: 2rem 4rem;
             @include breakpoint(medium) {
                 padding: 2rem;
-			}
+            }
             > a {
                 &:after {
                     content: '';
@@ -189,6 +189,14 @@
 
 			}
 		}
+
+    > .placeholder {
+      font-style: italic;
+      font-size: 2rem;
+      text-align: center;
+      width: 100%;
+      color: _palette(alt, fg);
+    }
 
 		@include breakpoint(small) {
 			> * {

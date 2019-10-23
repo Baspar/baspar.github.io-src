@@ -2,12 +2,13 @@
 title: Baspar - Miniblog
 description: The place for every interesting piece of knowledge I have to share, but not consequent enough to have its full blog article
 sitemap:
-priority: 1.0
-lastmod: 2017-11-02
-changefreq: weekly
+    priority: 1.0
+    lastmod: 2017-11-02
+    changefreq: weekly
 pagination:
-  enabled: true
-  collection: miniposts
+    per_page: 12
+    enabled: true
+    collection: miniposts
 ---
 <!DOCTYPE HTML>
 <!--
@@ -41,6 +42,7 @@ pagination:
             <!-- Main -->
             <div id="main">
 
+                <!-- Header -->
                 <article class="post featured">
                     <header class="major">
                         <h2><a href="#">Mini blog</a></h2>
@@ -48,21 +50,24 @@ pagination:
                     </header>
                 </article>
 
-                <!-- Post -->
-                <section class="minis">
-                    {% for post in site.miniposts %}
-                    <a href={{ post.url | absolute_url }}>
-                        <article onclick="window.location = {{ post.url | absolute_url }}">
-                            <header>
-                                <span class="date">{{ post.date | date_to_string }}</span>
-                                <h2>{{ post.title }}</h2>
-                            </header>
-                            <p>{{ post.excerpt }}</p>
-                        </article>
-                    </a>
-                    {% endfor %}
-                </section>
-
+                <!-- Posts -->
+                {% if paginator.total_posts == 0 %}
+                    {% include no-posts.html %}
+                {% else %}
+                    <section class="minis">
+                        {% for post in paginator.posts %}
+                        <a href={{ post.url | absolute_url }}>
+                            <article onclick="window.location = {{ post.url | absolute_url }}">
+                                <header>
+                                    <span class="date">{{ post.date | date_to_string }}</span>
+                                    <h2>{{ post.title }}</h2>
+                                </header>
+                                <p>{{ post.excerpt }}</p>
+                            </article>
+                        </a>
+                        {% endfor %}
+                    </section>
+                {% endif %}
 
                 <!-- Paginator -->
                 {% include paginator.html %}
