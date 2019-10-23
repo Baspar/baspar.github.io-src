@@ -6,8 +6,8 @@ priority: 1.0
 lastmod: 2017-11-02
 changefreq: weekly
 pagination:
-enabled: true
-collection: miniposts
+  enabled: true
+  collection: miniposts
 ---
 <!DOCTYPE HTML>
 <!--
@@ -19,8 +19,8 @@ collection: miniposts
 <html>
     <head>
         {% include head.html %}
-
     </head>
+
     <body class="is-loading">
 
         <!-- Wrapper -->
@@ -63,6 +63,9 @@ collection: miniposts
                     {% endfor %}
                 </section>
 
+
+                <!-- Paginator -->
+                {% include paginator.html %}
             </div>
 
             <!-- Footer -->

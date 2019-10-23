@@ -13,6 +13,10 @@
 		list-style: none;
 		margin: 0 0 _size(element-margin) 2px;
 		padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 		a, span {
 			@include vendor('transition', (
