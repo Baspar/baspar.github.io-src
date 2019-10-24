@@ -43,7 +43,7 @@ email:              me@bastien-laine.io
 telegram:           baspar
 
 # Gems
-gems:
+plugins:
   - jekyll-mentions
   - jekyll-sitemap
   - jekyll-feed
