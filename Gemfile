@@ -6,4 +6,4 @@ gem "jekyll-gist"
 gem 'jekyll-mentions'
 gem 'jekyll-feed'
 gem 'jekyll-paginate-v2'
-gem "nokogiri", "~> 1.8.2"
+gem "nokogiri", "~> 1.10.4"
