@@ -1,6 +1,8 @@
 ---
+layout: page
 title: Baspar - Blog
-description: Where
+header: Blog
+description: Big ideas and projects I have been working on and want to share about
 sitemap:
     priority: 1.0
     lastmod: 2017-11-02
@@ -10,80 +12,21 @@ pagination:
     enabled: true
     collection: posts
 ---
-<!DOCTYPE HTML>
-<!--
-    Massively by HTML5 UP
-    html5up.net | @ajlkn
-    Jekyll integration by somiibo.com
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-    <head>
-        {% include head.html %}
-    </head>
 
-    <body class="is-loading">
-
-        <!-- Wrapper -->
-        <div id="wrapper" class="fade-in">
-
-            <!-- Header -->
-            <header id="header">
-                <a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
-            </header>
+<section class="posts">
+    {% for post in paginator.posts %}
+    <article>
+        <header>
+            <span class="date">{{ post.date | date_to_string }}</span>
+            <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+        </header>
+        <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+        <p>{{ post.excerpt }}</p>
+        <ul class="actions">
+            <li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
+        </ul>
+    </article>
+    {% endfor %}
+</section>
 
 
-            <!-- Nav -->
-            <nav id="nav">
-                {% include nav.html %}
-                {% include icons.html %}
-            </nav>
-
-            <!-- Main -->
-            <div id="main">
-
-                <!-- Header -->
-                <article class="post featured">
-                    <header class="major">
-                        <h2><a href="#">Blog</a></h2>
-                        <p>Big ideas and projects I have been working on and want to share about</p>
-                    </header>
-                </article>
-
-                <!-- Posts -->
-                {% if paginator.total_posts == 0 %}
-                    {% include no-posts.html %}
-                {% else %}
-                    <!-- Post -->
-                    <section class="posts">
-                        {% for post in paginator.posts %}
-                        <article>
-                            <header>
-                                <span class="date">{{ post.date | date_to_string }}</span>
-                                <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
-                            </header>
-                            <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
-                            <p>{{ post.excerpt }}</p>
-                            <ul class="actions">
-                                <li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
-                            </ul>
-                        </article>
-                        {% endfor %}
-                    </section>
-                {% endif %}
-
-                <!-- Paginator -->
-                {% include paginator.html %}
-            </div>
-
-            <!-- Footer -->
-            {% include foot.html %}
-
-        </div>
-
-        <!-- Scripts -->
-        {% include scripts-main.html %}
-        {% include tracking.html %}
-
-    </body>
-</html>
