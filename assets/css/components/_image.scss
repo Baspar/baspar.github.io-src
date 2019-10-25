@@ -80,8 +80,19 @@
 	a.image {
 		overflow: hidden;
 
+    &._10 { width: 10%; &.center { left: 45%; } }
+    &._20 { width: 20%; &.center { left: 40%; } }
+    &._30 { width: 30%; &.center { left: 35%; } }
+    &._40 { width: 40%; &.center { left: 30%; } }
+    &._50 { width: 50%; &.center { left: 25%; } }
+    &._60 { width: 60%; &.center { left: 20%; } }
+    &._70 { width: 70%; &.center { left: 15%; } }
+    &._80 { width: 80%; &.center { left: 10%; } }
+    &._90 { width: 90%; &.center { left: 5%; } }
+
 		img {
 			@include vendor('transition', 'transform #{_duration(transition)} ease-out');
+      width: 100%;
 		}
 
 		&:hover {
