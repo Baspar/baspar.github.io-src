@@ -67,12 +67,13 @@
 	@import 'layout/footer';
 	@import 'layout/navPanel';
 
-  #main .post img {
-    width: 60%;
-    margin: 0 20%;
-    transition: transform .3s;
-    transform: scale(1);
-    &:hover {
-      transform: scale(1.05);
-    }
+// Post images
+#main .post img {
+  width: 60%;
+  margin: 0 20%;
+  transition: transform .3s;
+  transform: scale(1);
+  &:hover {
+    transform: scale(1.05);
   }
+}
