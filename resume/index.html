@@ -1,0 +1,61 @@
+---
+layout: page
+title: Baspar - Resume
+description:
+sitemap:
+    priority: 1.0
+    lastmod: 2017-11-02
+    changefreq: weekly
+---
+
+<section class="resume">
+  <div class="col-left">
+    <h2>Experiences</h1>
+    <br />
+    {% for experience in site.experiences reversed %}
+    <div class="experience">
+      <div class="description">
+        <div class="company">{{ experience.company }}</div>
+        <div class="location">{{ experience.location }}</div>
+        <div class="title">{{ experience.title }}</div>
+        <div class="dates">{{ experience.from }} - {{ experience.to }}</div>
+      </div>
+      <div class="content">
+        {{ experience.content }}
+      </div>
+    </div>
+    {% endfor %}
+
+    <h2>Education</h1>
+    <br />
+    {% for education in site.educations reversed %}
+    <div class="education">
+      <div class="description">
+        <div class="school">{{ education.school }}</div>
+        <div class="location">{{ education.location }}</div>
+        <div class="title">{{ education.title }}</div>
+        <div class="dates">{{ education.from }} - {{ education.to }}</div>
+      </div>
+      <div class="content">
+        {{ education.content }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="col-right">
+    <h2>Skills</h2>
+    <br />
+    {% for skillset in site.skills %}
+      <div>
+        <h3>{{ skillset.title }}</h3>
+        <ul>
+          {% for skill in skillset.items %}
+            <li>{{skill[0]}} ------ {{skill[1]}}/5</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+

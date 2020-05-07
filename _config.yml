@@ -7,13 +7,20 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
 # Collection
+collections_dir: _collections
 collections:
+  # Blog
   miniposts:
     output: true
     permalink: "/miniposts/:title/"
   posts:
     output: true
     permalink: "/posts/:title/"
+
+  # Resume
+  experiences:
+  educations:
+  skills:
 
 # Jekyll
 markdown:           kramdown
@@ -36,8 +43,6 @@ disqus_shortname:   baspar
 analytics-id:       "default"
 linkedin:           bastien-laine-196977109
 github:             baspar
-
-# personal
 location:           Singapore
 email:              me@bastien-laine.io
 telegram:           baspar

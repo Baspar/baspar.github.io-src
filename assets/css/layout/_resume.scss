@@ -1,0 +1,51 @@
+.resume {
+  line-height: initial;
+  display: flex;
+  p {
+    margin: 0;
+  }
+  h2 {
+    text-align: center;
+    border-bottom: 2px dashed grey;
+    padding-bottom: 1rem;
+  }
+
+  .col-left {
+    flex: 1;
+  }
+
+  .col-right {
+    margin-left: 3rem;
+  }
+
+  .experience, .education  {
+    font-size: 14px;
+    display: flex;
+    width: 100%;
+
+    & ~ .experience, & ~ .education {
+      margin-top: 30px;
+    }
+
+    .description {
+      width: 200px;
+      .company, .school {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .location {
+        font-weight: bold;
+      }
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .dates {
+        font-style: italic;
+      }
+    }
+    .content {
+      flex: 1;
+    }
+  }
+}
