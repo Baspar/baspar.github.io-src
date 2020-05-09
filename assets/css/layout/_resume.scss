@@ -18,6 +18,19 @@
     margin-left: 3rem;
   }
 
+  .skillset {
+    .skills {
+      .skill {
+        display: flex;
+        justify-content: space-between;
+        .skillName {
+        }
+        .skillRank {
+        }
+      }
+    }
+  }
+
   .experience, .education  {
     font-size: 14px;
     display: flex;

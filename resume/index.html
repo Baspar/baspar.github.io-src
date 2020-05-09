@@ -46,11 +46,30 @@ sitemap:
     <h2>Skills</h2>
     <br />
     {% for skillset in site.skills %}
-      <div>
+      <div class="skillset">
         <h3>{{ skillset.title }}</h3>
-        <ul>
+        <ul class="skills">
           {% for skill in skillset.items %}
-            <li>{{skill[0]}} ------ {{skill[1]}}/5</li>
+            {% if skill[1] %}
+            <li>
+              <div class="skill">
+                <span class="skillName">
+                  {{skill[0]}}
+                </span>
+                <span class="skillRank">
+                  {% for i in (1..skill[1]) %}
+                  ●
+                  {% endfor %}
+
+                  {% for i in (skill[1]..4) %}
+                  ○
+                  {% endfor %}
+                </span>
+              </div>
+            </li>
+            {% else %}
+              <li>{{skill[0]}}</li>
+            {% endif %}
           {% endfor %}
         </ul>
       </div>
